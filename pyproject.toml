@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "json_type_hinting"
+version = "0.1.0"
+description = ""
+authors = ["i2rdt@ya.ru"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pytest-xdist = {version = "^2.2.1", extras = ["psutil"]}
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.902"
+pytest = "^6.2.4"
+
+[tool.pytest.ini_options]
+addopts = "-n auto"
+testpaths = [
+    "tests"
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
